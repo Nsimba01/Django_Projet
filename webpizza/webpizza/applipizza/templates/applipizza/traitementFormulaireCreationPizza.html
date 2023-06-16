@@ -1,0 +1,62 @@
+<!Doctype html>
+
+<html lang="fr">
+
+  <head>
+  
+    <meta charset="UTF-8" />
+	
+	<title>Créer Pizza</title>
+	
+  
+  
+  </head>
+  
+  
+  <body>
+  
+	 
+	 <main>
+	 
+	 
+	    {% extends 'applipizza/base.html' %}
+		{% block title %} 
+		
+		Creation d'une Pizza
+
+		{% endblock %} 
+		
+		
+		{% block content %}
+	 
+	 
+		<h2>Creation Pizza </h2>
+	 
+		
+         <p>La Pizza  au nom de {{nom}} au prix de {{prix}} a bien été créé  </p>
+		
+		
+		{% endblock %}
+	 
+	 
+	 </main>
+	 
+	 <footer>
+	 
+	 
+	 Appli pizza 2023
+	 
+	 
+	 </footer>
+	 
+	 
+	 
+  
+  
+  
+  
+  </body>
+  
+  
+  
+ </html>

@@ -1,0 +1,165 @@
+<!Doctype html>
+
+<html lang="fr">
+
+  <head>
+  
+    <meta charset="UTF-8" />
+	
+	<title>la Pizza </title>
+	
+  
+  
+  </head>
+  
+  
+  <body>
+  
+	 
+	 <main>
+	 
+	 
+	    {% extends 'applipizza/base.html' %}
+		{% block title %} 
+		
+		 Détails d'une pizza
+		 
+		{% endblock %} 
+		
+		
+		{% block content %}
+	 
+	 
+		<h2> Voici votre pizza</h2>
+		<p>{{pizza}}</p>
+		
+		
+		
+		<h3> Les {{nbre_ingredient|length}} ingredients  de la pizza de {{pizza.nomPizza}} </h3>
+		
+		
+	
+		
+			<table border="1" class="side">
+		
+				<tr>
+		  
+					<th>Ingredients</th>
+				
+			
+				
+				
+		  
+				</tr>
+		  
+		  {% for ingr_QT in ingredient_QT %}
+		  
+				<tr>
+				
+					<td>{{ingr_QT.first.nomIngredient}} </td>
+					
+					
+				</tr>
+				
+		  {% endfor %}
+		  
+			</table>
+		
+			<table border="1" class="side1" >
+		
+					<tr>
+		  
+						<th>Quantité</th>
+				
+			
+				
+				
+		  
+					</tr>
+		  
+		  {% for ingr_QT in ingredient_QT %}
+		  
+				<tr>
+				
+					<td>{{ingr_QT.first.quantite}} </td>
+					
+					<!--<td>{{ingr_QT.first.quantite}} </td>-->
+		  
+		  
+		  
+				</tr>
+				
+		  {% endfor %}
+		  
+			</table>
+			
+			<table border="1" style="margin-top:-1px">
+			
+				<tr>
+		  
+						<th>Action</th>
+				
+			
+				
+				
+		  
+			    </tr>
+			
+				  {% for compteur in nbre_ingredient %}
+			
+						<tr>
+						
+							<td><a href=""  style="border-spacing: 5px;">supprimer</a></td>				
+				
+						<tr>
+		
+		
+		
+				   {% endfor %}
+		  
+			</table><br/><br/>
+			
+			
+		<b> Ajouter un ingrédient </b> <br/><br/>
+		
+		<form action="/pizzas/{{pizza.idPizza}}/addIngredient/" method="post">
+		
+		{% csrf_token %}
+		
+		{{form.as_div}}
+		
+		<input type="submit"  value="Envoyer">
+		
+		
+		</form>
+			
+	
+		
+		
+		{% endblock %} 
+		
+		
+		
+	 
+	 
+	 </main>
+	 
+	 <footer>
+	 
+	 
+	 Appli pizza 2023
+	 
+	 
+	 </footer>
+	 
+	 
+	 
+  
+  
+  
+  
+  </body>
+  
+  
+  
+ </html>

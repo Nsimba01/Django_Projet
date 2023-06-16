@@ -1,0 +1,70 @@
+{% load static %}
+
+<!Doctype html>
+
+<html lang="fr">
+
+  <head>
+  
+    <meta charset="utf-8" />
+	
+
+	
+	<link rel="stylesheet"  href="{% static 'applipizza/css/styles.css'%}" >
+	
+	<link rel="icon"  href="{% static 'applipizza/img/pizza_logo.png'%}" >
+
+	
+	<title>{% block title %}  {% endblock %}   </title>
+
+  
+  
+  </head>
+  
+  
+  <body>
+  
+     <header>
+	 
+	     <nav>
+		 
+		   <div> <a href="/pizzas/"> les pizzas </a> </div>
+		   
+		   <div> <a href="/ingredients/"> les ingredients  </a> </div>
+		   
+		   <div> <a href="/pizzas/add/"> Créer une pizza </a> </div>
+		   
+		   <div> <a href="/ingredients/add/"> créer un ingrédient  </a> </div>
+			
+			
+	     </nav>
+	 
+	 
+	 </header>
+	 
+	 <main>
+	 
+		{% block content %}    {% endblock %}
+
+	 
+	 </main>
+	 
+	 <footer>
+	 
+	 
+	 Appli pizza 2023
+	 
+	 
+	 </footer>
+	 
+	 
+	 
+  
+  
+  
+  
+  </body>
+  
+  
+  
+ </html>

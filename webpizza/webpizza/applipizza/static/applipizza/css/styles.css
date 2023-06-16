@@ -1,0 +1,66 @@
+h2{
+	
+	background-color:red;
+	
+}
+
+nav div {
+	
+	
+	  display: inline-block;
+	  
+	  border:2px solid grey;
+	  
+	  box-shadow: 2px 2px 2px 1px grey;
+	  
+	  margin-right:7px;
+	  
+	  padding:7px;
+
+	
+}
+
+nav{
+	
+	
+	text-align:center;
+	
+	
+	
+}
+
+nav div a {
+	
+	
+	text-decoration:none;
+	
+	color:
+	
+	
+}
+
+.side{
+	
+	float:left;
+	
+	margin-left:193px;
+	
+	
+}
+
+
+.side1{
+
+	
+	float:left;
+	
+	
+}
+
+/*
+
+table{
+	
+	display: inline
+	
+} */

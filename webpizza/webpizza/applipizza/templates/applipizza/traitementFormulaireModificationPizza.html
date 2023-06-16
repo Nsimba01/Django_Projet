@@ -1,0 +1,74 @@
+<!Doctype html>
+
+<html lang="fr">
+
+  <head>
+  
+    <meta charset="UTF-8" />
+	
+	<title>Formulaire de Traitement Modif Pizza</title>
+	
+  
+  
+  </head>
+  
+  
+  <body>
+  
+	 
+	 <main>
+	 
+	 
+	    {% extends 'applipizza/base.html' %}
+		{% block title %} 
+		
+		Formulaire de Traitement Modif Pizza
+
+		{% endblock %} 
+		
+		
+		{% block content %}
+	 
+	 
+		<h2>Formulaire de Traitement Modif Pizza</h2>
+		
+		<b> la pizza au nom de {{pizza.nomPizza}} a été modifiée </b>
+	 
+		
+        <form action="/pizzas/{{pizza.idPizza}}/updated/" method="post">
+		
+		
+		{% csrf_token %}
+		
+		{{form.as_div}}
+		
+		<input type="submit"  value="Envoyer">
+		
+		
+		</form>
+		
+		
+		{% endblock %}
+	 
+	 
+	 </main>
+	 
+	 <footer>
+	 
+	 
+	 Appli pizza 2023
+	 
+	 
+	 </footer>
+	 
+	 
+	 
+  
+  
+  
+  
+  </body>
+  
+  
+  
+ </html>

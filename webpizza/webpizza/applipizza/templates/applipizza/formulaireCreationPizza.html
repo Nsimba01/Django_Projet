@@ -1,0 +1,72 @@
+<!Doctype html>
+
+<html lang="fr">
+
+  <head>
+  
+    <meta charset="UTF-8" />
+	
+	<title>Creation Pizza</title>
+	
+  
+  
+  </head>
+  
+  
+  <body>
+  
+	 
+	 <main>
+	 
+	 
+	    {% extends 'applipizza/base.html' %}
+		{% block title %} 
+		
+		Creation d'une pizza
+
+		{% endblock %} 
+		
+		
+		{% block content %}
+	 
+	 
+		<h2>Creation Pizza</h2>
+	 
+		
+        <form action="/pizzas/create/" method="post">
+		
+		
+		{% csrf_token %}
+		
+		{{form.as_div}}
+		
+		<input type="submit"  value="Envoyer">
+		
+		
+		</form>
+		
+		
+		{% endblock %}
+	 
+	 
+	 </main>
+	 
+	 <footer>
+	 
+	 
+	 Appli pizza 2023
+	 
+	 
+	 </footer>
+	 
+	 
+	 
+  
+  
+  
+  
+  </body>
+  
+  
+  
+ </html>

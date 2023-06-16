@@ -1,0 +1,74 @@
+<!Doctype html>
+
+<html lang="fr">
+
+  <head>
+  
+    <meta charset="UTF-8" />
+	
+	<title>Formulaire de Traitement Modif Ingredient</title>
+	
+  
+  
+  </head>
+  
+  
+  <body>
+  
+	 
+	 <main>
+	 
+	 
+	    {% extends 'applipizza/base.html' %}
+		{% block title %} 
+		
+		Formulaire de Traitement Modif Ingredient
+
+		{% endblock %} 
+		
+		
+		{% block content %}
+	 
+	 
+		<h2>Formulaire de Traitement Modif Ingredient</h2>
+		
+		<b> Ingredient au nom de {{ingredient.nomIngredient}} a été modifiée </b>
+	 
+		
+        <form action="/ingredients/{{ingredient.idIngredient}}/updated/" method="post">
+		
+		
+		{% csrf_token %}
+		
+		{{form.as_div}}
+		
+		<input type="submit"  value="Envoyer">
+		
+		
+		</form>
+		
+		
+		{% endblock %}
+	 
+	 
+	 </main>
+	 
+	 <footer>
+	 
+	 
+	 Appli pizza 2023
+	 
+	 
+	 </footer>
+	 
+	 
+	 
+  
+  
+  
+  
+  </body>
+  
+  
+  
+ </html>

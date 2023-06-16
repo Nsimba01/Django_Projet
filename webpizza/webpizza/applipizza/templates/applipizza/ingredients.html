@@ -1,0 +1,74 @@
+<!Doctype html>
+
+<html lang="fr">
+
+  <head>
+  
+    <meta charset="UTF-8" />
+	
+	<title>les Ingredients </title>
+  
+  
+  </head>
+  
+  
+  <body>
+  
+	 
+	 <main>
+	 
+	  
+	    {% extends 'applipizza/base.html' %}
+		{% block title %} 
+		
+		les Ingredients
+
+		{% endblock %} 
+		
+		
+		{% block content %}
+	 
+	 
+		<h2> Voici nos {{ingredients|length}} ingredients </h2>
+		
+		<ul>
+		
+			{% for ing in ingredients %}
+			
+			<li>  {{ing}}</li> 
+			
+			<a  href="/ingredients/{{ing.idIngredient}}/update/">Modifier</a>
+			
+			<a  href="/ingredients/{{ing.idIngredient}}/delete/">Supprimer</a><br/><br/>
+			
+			{% endfor %}
+			
+			
+		
+		
+		</ul>
+		
+		{% endblock %} 
+	 
+	 
+	 </main>
+	 
+	 <footer>
+	 
+	 
+	 Appli pizza 2023
+	 
+	 
+	 </footer>
+	 
+	 
+	 
+  
+  
+  
+  
+  </body>
+  
+  
+  
+ </html>
